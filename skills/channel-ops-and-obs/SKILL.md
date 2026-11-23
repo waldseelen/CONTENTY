@@ -81,4 +81,12 @@ Yayın sonrası 48 saat ve 7. günde ajandan şu kontroller istenir (kota dostu)
 * `youtube_analytics_content_type_breakdown` — Uzun video vs Shorts vs Canlı Yayın performans kıyaslaması.
 * `youtube_analytics_traffic_sources` — Keşfet / Arama / Önerilen oranlarına göre başlık & thumbnail kalibrasyonu.
 
+---
+
+## 5. Doğrudan OBS CLI & Sağlık Kontrolü (`Claude-OBS-Plugin` MIT)
+MCP sunucusunun kurulu olmadığı ortamlarda veya hızlı otomasyon/teşhis için `scripts/` altındaki doğrudan OBS CLI araçları kullanılabilir:
+* **Makine & OBS Sağlık Kontrolü (salt okunur):** `python3 scripts/obs_health.py`
+* **Canlı Sahne / Kayıt Kontrolü (`obs-websocket v5`):** `uv run --with obsws-python python3 scripts/obs_ws.py status`
+* **Deklaratif Kısayol Uygulama (OBS kapalıyken, `.bak` yedeği alır):** `python3 scripts/obs_hotkeys.py hotkeys.json --dry-run`
+
 İlgili rehberler: [[YOUTUBE_API_GUIDE]], [[references/mcp-catalog|mcp-catalog]], [[ARCHITECTURE]].

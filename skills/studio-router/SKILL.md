@@ -21,12 +21,12 @@ python3 scripts/init_project.py "<proje-adi>" --format <youtube|faceless|shorts|
 
 | İstek / Format | İzlenecek Skill Sırası | Kullanılacak Scriptler |
 | :--- | :--- | :--- |
-| **Ham ekran kaydı / talking-head kurgusu** | `ajanla-video-kurgu` → `audio-and-roughcut` → `video-edit-core` | `transcribe.py`, `remove-silence.py` / `autocut.sh`, `mltgen.py`, `vrender.sh` |
-| **Yüzsüz (faceless) anlatım / hikâye videosu** | `video-prompt-builder` → `ajanla-video-kurgu` (pano haritası) → `video-motoru` → `faceless-and-shorts` | `transcribe.py`, `mltgen.py`, `vrender.sh`, HyperFrames |
-| **Canlı yayın (OBS) → özet + Shorts** | `channel-ops-and-obs` → `audio-and-roughcut` → `faceless-and-shorts` | `transcribe.py`, `caption_and_chapters.py`, `qc_gate.py` |
+| **Ham ekran kaydı / talking-head kurgusu** | `ajanla-video-kurgu` → `audio-and-roughcut` → `video-edit-core` | `transcribe.py`, `remove-silence.py` / `autocut.sh`, `yt_deadair.py`, `mltgen.py`, `vrender.sh` |
+| **Yüzsüz (faceless) anlatım / hikâye videosu** | `youtube-growth` → `video-prompt-builder` → `diagram-svg` → `video-motoru` (`gsap-motion`) → `faceless-and-shorts` | `yt_hookscore.py`, `transcribe.py`, `mltgen.py`, `vrender.sh`, HyperFrames |
+| **Canlı yayın (OBS) → özet + Shorts** | `channel-ops-and-obs` → `audio-and-roughcut` → `faceless-and-shorts` | `obs_health.py`, `obs_ws.py`, `detect_highlights.sh`, `transcribe.py`, `caption_and_chapters.py`, `qc_gate.py` |
 | **Podcast → video / audiogram + kesitler** | `audio-and-roughcut` (`podcast` profili) → `faceless-and-shorts` | `transcribe.py`, `caption_and_chapters.py`, `qc_gate.py --profile podcast` |
-| **Yüksek CTR Thumbnail** | `thumbnail-factory` | `ffmpeg` / `PIL` (`1280x720`, `<2MB`) |
-| **Video eşlikçi sunum sitesi** | `sunum-sitesi` | Statik HTML/CSS/JS + `python3 -m http.server` |
+| **Yüksek CTR Thumbnail & Başlık Paketi** | `youtube-growth` → `thumbnail-factory` | `yt_title_lint.py`, `yt_retention.py`, `ffmpeg` / `PIL` (`1280x720`, `<2MB`) |
+| **Video eşlikçi sunum sitesi & SVG diyagram** | `sunum-sitesi` + `gsap-motion` + `diagram-svg` | Statik HTML/CSS/JS/SVG + `python3 -m http.server` |
 
 ## 3. Değişmez Çıkış Kapısı
 Her teslimat öncesi kullanıcıya hızlı taslak gösterilir ve final MP4 üzerinde fail-closed kapı çalıştırılır:

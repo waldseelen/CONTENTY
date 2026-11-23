@@ -116,4 +116,17 @@ Yerel `faster-whisper` ile kelime-zamanlı transkript çıkarıldığında forma
 * **Tepki & Kahkaha Koruma:** Kahkaha, vurucu espri veya vurgu anlarının hemen sonrasından kesilmez; tepki nefesi korunur.
 * **Tıkırtı Önleme:** Her kesim noktasında `4–30 ms` `afade` uygulanır.
 
+### Sahne Bazlı TTS Süre Manifesti Sözleşmesi (`skill-tts` MIT)
+Yerel TTS (Kokoro / Piper) ile sahne bazlı seslendirme üretildiğinde her sahnenin görsel süresi ses dosyasının gerçek süresinden türetilir; bunun için `manifest.json` standardı kullanılır:
+```json
+{
+  "sample_rate": 24000,
+  "duration": 9.476,
+  "segments": [
+    {"id": "01-hook", "file": "voiceover/01-hook.wav", "start": 0.0, "end": 1.647, "duration": 1.647}
+  ]
+}
+```
+HyperFrames (`gsap-motion` / `video-motoru`) ve `mltgen.py` bu `start` / `duration` değerlerini okuyarak ses-görüntü kaymasını sıfırlar.
+
 İlgili rehberler: [[skills/video-edit-core/SKILL|video-edit-core]], [[skills/faceless-and-shorts/SKILL|faceless-and-shorts]], [[skills/ajanla-video-kurgu/references/06-ses-transkript|06-ses-transkript]], [[ARCHITECTURE]].

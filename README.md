@@ -28,6 +28,7 @@ Herhangi bir YouTube kanalı veya video projesi için **açık kaynaklı araçla
 * [[skills/studio-router/SKILL|studio-router]] — Tüm formatlar (`OBS Yayın`, `Yüzsüz`, `Podcast`, `Shorts`, `Thumbnail`, `Sunum`) için tek giriş yönlendiricisi.
 * [[ARCHITECTURE]] — OBS, yüzsüz explainer ve podcast için uçtan uca üretim boru hattı, 10 sert doğruluk kuralı ve kalite kapıları.
 * [[YOUTUBE_API_GUIDE]] — Google Cloud OAuth 2.0 kurulumu, `resumable` yükleme, kotalar, `private`-taslak stratejisi ve MCP bağlantı şablonları.
+* [[FUTURE]] — GitHub araştırmasından çıkan ileri faz açık kaynak skill, plugin ve MCP adayları envanteri.
 
 ### 2. Ajan Skill Fabrikası (`skills/`)
 

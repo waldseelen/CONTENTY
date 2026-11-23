@@ -105,4 +105,16 @@ YouTube'da bölümlerin (chapters) aktif olması için uyulması zorunlu teknik 
 * Her bölüm en az **10 saniye** sürmelidir (`edit_video.py` 10 saniye altı uyarısı verir).
 * Zaman damgaları kesim sonrası **final video zaman çizelgesine** göre hesaplanır, ham kayda göre değil.
 
+---
+
+## 5. Vurucu Kesit Puanlama & Otomatik Highlight Tespiti
+* **Otomatik Ses Piki + Sahne Değişimi Tespiti (`lxgic-clipper` MIT):**
+  ```bash
+  ./scripts/detect_highlights.sh 01-raw/yayin.mp4 70
+  ```
+* **5 Boyutlu Short Puanlama Rubriği & Platform Safe-Zone:**
+  * Puanlama ağırlıkları (`Hook 0.30 + Coherence 0.25 + Emotion 0.20 + Value 0.15 + Payoff 0.10`, eşik `>= 60`): `skills/faceless-and-shorts/references/scoring-rubric.md`
+  * TikTok / Reels / YouTube Shorts güvenli alan ölçüleri: `skills/faceless-and-shorts/references/platform-specs.md`
+  * Kinetik altyazı stilleri: `skills/faceless-and-shorts/references/caption-styles.md`
+
 İlgili rehberler: [[skills/video-edit-core/SKILL|video-edit-core]], [[skills/audio-and-roughcut/SKILL|audio-and-roughcut]], [[references/awesome-video-skills|awesome-video-skills]].
