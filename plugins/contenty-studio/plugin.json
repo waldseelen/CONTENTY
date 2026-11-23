@@ -1,0 +1,11 @@
+{
+  "name": "contenty-studio",
+  "displayName": "Contenty — AI Video & YouTube Studio",
+  "version": "1.0.0",
+  "description": "Jenerik, açık kaynaklı AI video & YouTube üretim fabrikası: ses temizliği, transkript tabanlı kurgu, HyperFrames hareketli grafik, hikâye/retention planlama, yüksek CTR thumbnail ve OBS/YouTube MCP otomasyonu.",
+  "suggestedPrompts": [
+    "Ham ekran kaydını transkript tabanlı kaba kurguya al (boşluk + tekrar kesimi)",
+    "Bu video fikri için hikâye omurgası, pano haritası ve 3 yüksek CTR thumbnail açısı çıkar",
+    "HyperFrames ile marka kilitli bir giriş/açıklama sahnesi üret ve edit.json planına ekle"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "_comment": "Şablon MCP konfigürasyonu — kullanacağın sunucuları ~/.gemini/config/mcp_config.json (veya Claude Code .mcp.json) içine kendi yollarınla kopyala.",
+  "mcpServers": {
+    "obs": {
+      "command": "uvx",
+      "args": ["obs-mcp"],
+      "env": {
+        "OBS_HOST": "localhost",
+        "OBS_PORT": "4455",
+        "OBS_PASSWORD": "BURAYA_OBS_SIFRESI"
+      }
+    },
+    "kinocut": {
+      "command": "uvx",
+      "args": ["kinocut==2.0.1"],
+      "env": {
+        "KINOCUT_TOOLS": "profile:editor",
+        "KINOCUT_VISION_MODE": "off"
+      }
+    },
+    "ffmpeg-skill": {
+      "command": "python3",
+      "args": ["/path/to/ffmpeg-skill/mcp_server.py"],
+      "env": {
+        "FFMPEG_SKILL_MCP_TOOLS": "probe,cut,silence,fit,caption,audio,loudness,render,export,check,look"
+      }
+    },
+    "youtube-uploader": {
+      "command": "/path/to/bin/youtube-uploader-mcp",
+      "args": [
+        "-client_secret_file",
+        "/path/to/.secrets/client_secret.json"
+      ]
+    },
+    "youtube-studio": {
+      "command": "youtube-studio-mcp",
+      "env": {
+        "YOUTUBE_MCP_CLIENT_SECRET": "/path/to/.secrets/client_secret.json"
+      }
+    }
+  }
+}

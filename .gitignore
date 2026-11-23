@@ -1,0 +1,21 @@
+# Secrets & OAuth tokens (asla git'e ekleme!)
+.secrets/
+*client_secret*.json
+*token*.json
+.youtube_uploader_channels_cache
+.env
+
+# Binaries & temp
+bin/
+_incoming/
+*.zip
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Large raw/rendered media files
+workspace/01-raw/*
+workspace/02-cleaned/*
+workspace/03-exports/*
+!workspace/**/.gitkeep
