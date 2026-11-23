@@ -1,0 +1,16 @@
+{
+  "name": "contenty-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CONTENTY generic AI video, HyperFrames motion, and YouTube production factory",
+  "scripts": {
+    "check:py": "python3 -m py_compile scripts/*.py",
+    "check:sh": "for s in scripts/*.sh; do bash -n \"$s\"; done",
+    "check": "npm run check:py && npm run check:sh"
+  },
+  "dependencies": {
+    "decktape": "^3.17.0",
+    "gsap": "^3.15.1",
+    "hyperframes": "^0.9.86"
+  }
+}
