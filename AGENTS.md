@@ -1,6 +1,11 @@
-# CONTENTY Studio — Agent Instructions
+# CONTENTY Studio — Core Engine Agent Instructions
 
-Bu depo jenerik bir AI video, YouTube ve canlı yayın üretim fabrikasıdır.
+Bu depo jenerik, kanalsız (channel-agnostic) **ortak çekirdek üretim motorudur** (plugin, skill, MCP konfigürasyonu, script, şablon ve kalite kapıları).
+
+## Çekirdek Sınırı ve Sahiplik
+- **Tek Sahiplik:** `CONTENTY` (ortak motor), `SACMA` (kişisel kanal deposu) ve `sis` (çok kanallı üretim stüdyosu) depolarının tamamının teknik sahibi Buğra'dır.
+- **Karışıklık Yasağı:** Hiçbir tek kanala özel strateji, marka kilidi, OAuth sırrı veya operatör kuralı (`SACMA` veya `sis`) `CONTENTY` içine yazılmaz. Tüketici depoları `CONTENTY`'yi `core/` Git alt modülü (submodule) olarak tüketir ve kendi kurallarını kendi depolarında izole tutar.
+- **Döngüsel Submodule Yasağı:** `CONTENTY` içine asla tüketici depoları (`SACMA`, `sis`) alt modül olarak eklenmez.
 
 ## Keşif ve Başlangıç
 1. Yeni bir üretim işi geldiğinde ilk olarak `skills/studio-router/SKILL.md` dosyasını oku ve `scripts/init_project.py` ile proje klasörünü kur.
